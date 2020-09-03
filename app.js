@@ -101,6 +101,6 @@ app.get('/', function(req, res){
     res.redirect("/blogs");
 });
 
-app.listen(3000, function(){
-    console.log(`Server is running at port 3000!!`)
+app.listen(80, function(){
+    console.log(`Server is running!!!`)
 });
