@@ -1,0 +1,14 @@
+body{
+    margin-top: 6%;
+}
+i.icon{
+    font-size: 2em;
+}
+
+.conatiner.main{
+    margin-top: 7.0em;
+}
+
+#delete{
+    display: inline;
+}
