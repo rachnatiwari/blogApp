@@ -6,9 +6,8 @@ var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 
 //APP CONFIGRATION
-// mongoose.connect("mongodb://localhost/blogApp",{useNewUrlParser:true});
-mongoose.connect("mongodb://localhost:27017/blogApp", { useNewUrlParser: true, useUnifiedTopology: true });
-
+// mongoose.connect("mongodb://localhost:27017/blogApp", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://Rachna:blogapp@cluster0.hojfv.gcp.mongodb.net/blogApp?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.set("view engine" , "ejs");
 app.use(express.static("public"));
@@ -29,18 +28,6 @@ var blogSchema = new mongoose.Schema({
 });
 var Blog = mongoose.model("Blog" , blogSchema);
 
-// TESTING
-// Blog.create({
-//     title : "TEST BLOG",
-//     image : "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7a_b5sOfcVNjBc3kZ14PigWYsNFuYDXLhFje-5ClZexMuoSkL&usqp=CAU",
-//     body : "This is the test blog"
-// },function(err,createdPost){
-//     if(err)
-//         console.log(err);
-//     else{
-//         console.log(createdPost);
-//     }
-// });
 
 //RESTFUL ROUTES
 app.get("/blogs" , function(req,res){
