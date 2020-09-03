@@ -102,6 +102,6 @@ app.get('/', function(req, res){
     res.redirect("/blogs");
 });
 
-app.listen(port, function(){
+app.listen(port,"0.0.0.0", function(){
     console.log(`Server is running!!!`)
 });
