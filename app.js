@@ -4,7 +4,7 @@ var expressSanitizer = require("express-sanitizer");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-var port = 80 || 443 || 3000;
+var port = 5000||3000;
 
 //APP CONFIGRATION
 // mongoose.connect("mongodb://localhost:27017/blogApp", { useNewUrlParser: true, useUnifiedTopology: true });
