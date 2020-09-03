@@ -4,6 +4,7 @@ var expressSanitizer = require("express-sanitizer");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var port = 3000 || 80;
 
 //APP CONFIGRATION
 // mongoose.connect("mongodb://localhost:27017/blogApp", { useNewUrlParser: true, useUnifiedTopology: true });
@@ -101,6 +102,6 @@ app.get('/', function(req, res){
     res.redirect("/blogs");
 });
 
-app.listen(80, function(){
+app.listen(port, function(){
     console.log(`Server is running!!!`)
 });
